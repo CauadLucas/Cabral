@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre seu lar perfeito com nossa imobiliária. Oferecemos uma vasta seleção de imóveis com o melhor atendimento.">
+    <meta name="keywords" content="imobiliária, imóveis, casa, apartamento, aluguel, compra, venda, lar">
+    <title>Imobiliária - Encontre seu lar perfeito</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 20px 0;
+            border-bottom: 1px solid #f4f4f4; 
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            padding: 5px 10px; 
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #0056b3; 
+        }
+
+        .hero {
+            position: relative;
+            padding: 100px 20px; 
+            text-align: center;
+            background: url('https://www.decorfacil.com/wp-content/uploads/2016/11/20161109exterior-14.jpg') no-repeat center center/cover;
+        }
+
+        .hero h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem; 
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #0056b3; 
+        }
+
+        .imoveis {
+            padding: 50px 20px; 
+        }
+
+        .imoveis h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+    .search-section {
+        padding: 40px 20px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .search-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .search-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .search-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .search-options select {
+        width: calc(33.33% - 10px);
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .range-inputs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .range-inputs label {
+        margin-right: 5px;
+    }
+
+    .range-inputs input[type="range"] {
+        flex: 1;
+        cursor: pointer;
+    }
+
+    button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            background: #fff; 
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02); 
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 5px; 
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Home</a></li>
+                    <li><a href="CadastroDoImóvel.html">Cadastra Imóvel</a></li>
+                    <li><a href="SobreNos.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a class="btn-profile" href="Login.html"><i class="large material-icons">account_circle</i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<br>
+
+    <section id="inicio" class="hero">
+        <h2>Encontre o Seu Lar dos Sonhos!</h2>
+        <p>Explore nossa seleção de imóveis e encontre o que você sempre sonhou.</p>
+        <a href="#imoveis" class="btn">Ver Imóveis</a>
+    </section>
+
+<br><br>
+
+    <section class="search-section">
+        <div>
+            <h2>Qual Imóvel Está Procurando?</h2>
+                <form class="search-form">
+                    <div class="search-options">
+                        <select>
+                            <option selected>Selecione uma Cidade</option>
+                            <option>São Paulo - SP</option>
+                            <option>Campinas - SP</option>
+                        </select>
+
+                        <select>
+                            <option selected>Selecione um Bairro</option>
+                            <option>Bairro 1</option>
+                            <option>Bairro 2</option>
+                        </select>
+
+                        <select>
+                            <option selected>Imóvel Status</option>
+                            <option>Pronto para Morar</option>
+                            <option>Na Planta</option>
+                        </select>
+
+                        <select>
+                            <option selected>Tipo do Imóvel</option>
+                            <option>Apartamento</option>
+                            <option>Casa</option>
+                            <option>Terreno</option>
+                        </select>
+
+                        <select>
+                            <option selected>Numero de Quartos</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>3+</option>
+                        </select>
+
+                        <select>
+                            <option selected>Garagem</option>
+                            <option>Sim</option>
+                            <option>Não</option>
+                        </select>
+                    </div>
+                <button type="submit">Buscar Imóvel</button>
+                </form>
+            </div>
+    </section>
+
+    <section id="imoveis" class="imoveis">
+        <div class="container">
+            <h2>Nossos Imóveis</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="Imagens do carrossel/20161109exterior-14.jpg" alt="Imagem do imóvel 1">
+                    <h3>Encontre a Casa dos Seus Sonhos com Piscina Privativa!</h3>
+                    <p> Imagine chegar em casa e poder relaxar em uma ampla piscina particular, cercada por espaços modernos e aconchegantes. Essa casa em condomínio fechado oferece tudo o que você sempre quis: segurança, conforto e aquele toque especial que faz você se sentir em casa desde o primeiro momento. Viver aqui é como estar de férias todos os dias!</p>
+                    <a href="#" class="btn">Ver Detalhes</a>
+                </div>
+
+                <div class="card">
+                    <img src="Imagens do carrossel/20161109exterior-15.jpg" alt="Imagem do imóvel 2">
+                    <h3>Mansão de Luxo Feita para Momentos em Família</h3>
+                    <p>Esta mansão é mais do que uma casa - é um espaço para criar memórias inesquecíveis com quem você ama. Com uma área de convivência perfeita para receber amigos, uma lareira externa aconchegante e uma arquitetura de cair o queixo, é o lar ideal para quem quer viver com estilo, conforto e muita sofisticação. Venha conhecer e veja por si mesmo o que é viver em um lugar especial.</p>
+                    <a href="#" class="btn">Ver Detalhes</a>
+                </div>
+
+                <div class="card">
+                    <img src="Imagens do carrossel/20161109exterior-16.jpg" alt="Imagem do imóvel 3">
+                    <h3>Vista de Tira o Fôlego e Piscina Suspensa - Uma Experiência Única!</h3>
+                    <p>Já imaginou morar em uma casa onde cada detalhe foi pensado para surpreender? Com uma vista incrível e uma piscina suspensa, essa casa é o refúgio ideal para quem busca exclusividade e um toque de sofisticação. É o tipo de lar que inspira, acolhe e impressiona, feito para você relaxar e se conectar com o que realmente importa. Venha se encantar com cada cantinho!</p>
+                    <a href="#" class="btn">Ver Detalhes</a>
+                </div>
+
+                <!-- Aqui serve para adicione mais imóveis -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Imobiliária.</p>
+        </div>
+    </footer>
+</body>
+</html>
